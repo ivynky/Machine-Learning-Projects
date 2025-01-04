@@ -28,11 +28,11 @@ test.csv: Personal records for the remaining one-third (~4300) of the passengers
 Our goal is to predict whether each passenger in the test set was transported to another dimension during the collision. We'll utilize machine learning techniques to analyze the provided data and make predictions.
 
 ## Approach:
-Data Exploration: We'll explore the dataset to understand its structure, distribution, and deal with missing values.
-Feature Engineering: We'll engineer new features if needed and preprocess the data for modeling.
-Model Selection: We'll select appropriate machine learning models and train them using the training data.
-Model Evaluation: We'll evaluate the performance of the trained models using appropriate evaluation metrics.
-Prediction: Finally, we'll make predictions for the passengers in the test set and submit our results.
+Data Exploration: Explored the dataset to understand its structure, distribution, and deal with missing values.
+Feature Engineering: Engineered new features if needed and preprocess the data for modeling.
+Model Selection: Selected appropriate machine learning models and trained them using the training data.
+Model Evaluation: Evaluated the performance of the trained models using appropriate evaluation metrics.
+Prediction: Finally,  the trained data was used to predict the passengers in the test set.
 
 ## Statistical Modeling:
 Step 1: Converted the categorical variables to dummy varaiables
