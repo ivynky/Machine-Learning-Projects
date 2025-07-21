@@ -2,44 +2,60 @@
 # The Cosmic Mystery of Spaceship Titanic: A Data Science Investigation
 Data source: (https://www.kaggle.com/competitions/spaceship-titanic)
 
-Contributors: Nkiru Onyemekwu, Preeti Agrawal, Evangeline Olalusi
+##Overview:
 
-##Introduction:
+In the year 2912, a routine interstellar voyage turned mysterious when the Spaceship Titanic encountered a spacetime anomaly, leaving the fate of its passengers uncertain. This project tackles a fictional yet structured data science challenge: predicting whether passengers were transported to an alternate dimension following the event.
+Using a dataset recovered from the ship’s damaged computer system, we aim to apply machine learning techniques to understand patterns in the data and accurately classify passenger outcomes.
 
-Welcome to the year 2912, where the enigmatic Spaceship Titanic's collision with a spacetime anomaly has led to a cosmic mystery. Our task is to predict whether passengers were transported to an alternate dimension during this cataclysmic event. In this summary, we'll explore the dataset provided, consisting of personal records recovered from the ship's damaged computer system.
+## Dataset Summary:
 
-## Dataset Description:
+The dataset is divided into two parts:
 
-train.csv: Personal records for about two-thirds (~8700) of the passengers, used as training data.
+train.csv: Contains personal records for approximately two-thirds (~8,700) of the passengers. This dataset includes:
 
-PassengerId: Unique ID for each passenger.gggg indicates a group the passenger is travelling with and pp is their number within the group.
-HomePlanet: The planet the passenger departed from.
-CryoSleep: Indicates if the passenger elected to be in suspended animation.
-Cabin: The cabin number where the passenger stayed.Takes the form deck/num/side, where side can be either P for Port or S for Starboard.
-Destination: The planet the passenger was headed to.
-Age: Age of the passenger.
-VIP: Indicates if the passenger paid for VIP service.
-RoomService, FoodCourt, ShoppingMall, Spa, VRDeck: Amount billed at luxury amenities.
-Name: First and last names of the passenger.
-Transported: Whether the passenger was transported to another dimension (Target).
-test.csv: Personal records for the remaining one-third (~4300) of the passengers, used for prediction (unseen data)
+  PassengerId: Unique identifier, where the first four digits denote group ID and the last two indicate group member.  
+  HomePlanet: Origin planet.  
+  CryoSleep: Whether the passenger chose suspended animation.  
+  Cabin: Location onboard, structured as deck/number/side (Port or Starboard).  
+  Destination: Target planet.  
+  Age: Passenger's age.  
+  VIP: Indicator of VIP status.  
+  RoomService, FoodCourt, ShoppingMall, Spa, VRDeck: Charges for onboard amenities.  
+  Name: Passenger’s full name.  
+  Transported: Target variable; whether the passenger was transported to another dimension.
+
+test.csv: Contains the remaining one-third (~4,300) of records, used for final prediction.)
 
 ## Objective:
-Our goal is to predict whether each passenger in the test set was transported to another dimension during the collision. We'll utilize machine learning techniques to analyze the provided data and make predictions.
+The goal is to build a classification model that can predict the Transported status of each passenger in the test set based on the available features.
 
-## Approach:
-Data Exploration: Explored the dataset to understand its structure, distribution, and deal with missing values.
-Feature Engineering: Engineered new features if needed and preprocess the data for modeling.
-Model Selection: Selected appropriate machine learning models and trained them using the training data.
-Model Evaluation: Evaluated the performance of the trained models using appropriate evaluation metrics.
-Prediction: Finally,  the trained data was used to predict the passengers in the test set.
+## Methodology:
+1. Data Exploration
+- Reviewed dataset structure and identified missing values.
+- Analyzed feature distributions and correlations with the target variable.
 
-## Statistical Modeling:
-Step 1: Converted the categorical variables to dummy varaiables
-Step 2: Standardized the continous variables to ensure they all have the same scale
-Step 3: Conducted a training and testing on the training dataset using a ratio of 80:20
-Step4: Explored 3 models; logistic regression, decision tree and random forest to identify the most optimal model to use for the prediction.
+2. Preprocessing and Feature Engineering
+- Converted categorical variables to dummy variables.
+- Standardized continuous variables for consistent scaling.
+- Handled missing data using appropriate imputation techniques.
 
-## Findings:
-Achieved 79% accuracy rate with the logistic regression which was the highest compared to the other models.
-The outcome of the logistic regression was used to predict the unseen data
+3. Model Development
+- Split the training data into 80% training and 20% validation sets.
+
+Evaluated three supervised learning models:
+- Logistic Regression
+- Decision Tree
+- Random Forest
+
+4. Model Evaluation
+- Performance was assessed using accuracy as the primary metric.
+- Logistic regression emerged as the best-performing model with an accuracy of 79% on the validation set.
+
+5. Final Prediction
+The logistic regression model was used to generate predictions for the test dataset..
+
+## Key Takeaways:
+- Simpler models like logistic regression can perform competitively on structured data with proper preprocessing.
+- Effective handling of categorical variables and missing data was essential to achieving strong model performance.
+- The project showcases end-to-end implementation of a classification problem, from data cleaning to model deployment
+
